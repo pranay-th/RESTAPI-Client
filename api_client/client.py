@@ -49,3 +49,6 @@ class APIClient:
 
     def update_post(self,post_id,payload):
         return self._send_request("PUT", f"{self.post_endpoint}/{post_id}",payload)
+
+    def delete_post(self,post_id):
+        return self._send_request("DELETE",f"{self.post_endpoint}/{post_id}")
